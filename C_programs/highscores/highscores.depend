@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1448510150 source:c:\users\jibles\google drive\c_programs\highscores\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

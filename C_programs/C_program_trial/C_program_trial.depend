@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1447936198 source:c:\users\jibles\desktop\c_programs\c_program_trial\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	<math.h>
+	"Seans_info.h"
+
+1447293394 c:\users\jibles\desktop\c_programs\c_program_trial\seans_info.h
+

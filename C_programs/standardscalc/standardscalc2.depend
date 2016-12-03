@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1449322731 source:c:\users\jibles\google drive\c_programs\standardscalc\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
