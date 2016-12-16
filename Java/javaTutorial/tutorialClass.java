@@ -3,6 +3,7 @@ import java.util.Random;
 import java.util.EnumSet;
 import java.io.File;
 import java.util.*;
+import java.lang.*;
 
 //Any basic functions not outlined in this tutorial are most likely the exact same as in C
 //e.g:
@@ -33,7 +34,6 @@ class tutorialClass{
         System.out.println(result);
         */
 
-        //System.out.println(gradeResponse('A'));
 
         //the testClass class is defined in the file testClass.java
         //By creating an object from this class using the below command
@@ -206,6 +206,8 @@ class tutorialClass{
         }
         */
 
+        //~~~~~//
+
         //This on the other hand demonstrates the use of the EnumSet.range function
         //This allows your to create an array which is only made up of a section of
         //the constants from the enum class
@@ -293,6 +295,95 @@ class tutorialClass{
             System.out.println("you got an error")
         }
         */
+
+        //Writing to files
+        //Refer to createFile.java
+        /*
+        createFile f = new createFile();
+        f.openFile("test.txt");
+        f.addRecords("the beans are cool");
+        f.closeFile();
+        */
+
+        //Reading from files
+        //Refer to ReadFile.java
+        /*
+        ReadFile f = new ReadFile();
+        f.openFile("test.txt");
+        f.readLines();
+        f.closeFile();
+        */
+
+
+        //COMMON STRING METHODS
+        //startsWith
+        /*
+        String s = "Hello";
+        String t = "Beans";
+        s.startsWith("He"); // returns true
+        t.startsWith("He"); // returns false
+
+        //endsWith
+        s.endsWith("llo"); // returns true
+        t.endsWith("He"); // returns false
+
+        //indexOf - returns the first occurence of a string or char
+        //We can also specify the minimum index in the second argument
+        s = "thebeansarecoolthebeansarecool";
+        int i = s.indexOf('b'); //This sets i to 3
+        int i2 = s.indexOf('b', 4); //This sets i2 to 18
+        int sub = s.indexOf("beans"); //returns the index of the start of the word - 3
+        */
+
+        //Concatenating strings
+        /*
+        String a = "Bacon ";
+        String b = "monster";
+
+        String concat1 = a + b;
+        String concat2 = a.concat(b);
+
+        System.out.println(concat1);
+        System.out.println(concat1);
+        */
+
+        //manipulating strings
+        /*
+        String a = "Baconb";
+        String b = "      monster     \n";
+
+        String upperA = a.toUpperCase();
+        String replacedA = a.replace("B", "F"); //Replaces first occurence
+        String lowerA = a.toLowerCase();
+        String trimmedB = b.trim(); //removes new lines and white space
+        System.out.println(a);
+        System.out.println(upperA);
+        System.out.println(replacedA);
+        System.out.println(lowerA);
+        System.out.println(trimmedB);
+        */
+
+        //Collections(Lists)
+        List<String> list1 = new ArrayList<String>();
+        list1.add("beans");
+        list1.add("pizza");
+        list1.add("cats");
+        for(int i = 0 ; i < list1.size() ; i++){
+            System.out.println(list1.get(i));
+        }
+
+        List<String> list2 = new ArrayList<String>();
+        list2.add("beans");
+        list2.add("cats");
+        subtractList(list1, list2);
+
+        System.out.println("--------------------");
+
+
+        for(int i = 0 ; i < list1.size() ; i++){
+            System.out.println(list1.get(i));
+        }
+
 
 
 
@@ -403,5 +494,12 @@ class tutorialClass{
         return String.format("%d:%02d:%02d %s", ((h > 12) ? h - 12 : h),m ,s, ((h > 12) ? "pm" : "am"));
     }
 
-
+    public static void subtractList(Collection<String> list1, Collection<String> list2){
+        Iterator<String> it = list1.iterator();
+        while(it.hasNext()){
+            if(list2.contains(it.next())){
+                it.remove();
+            }
+        }
+    }
 }
